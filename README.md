@@ -7,10 +7,12 @@ appended at the end.
 For example: `functions-1.js` is tested by the `test/functions-1.js` file. To
 run that test do:
 ```bash
-$ npm test < insert the challenge file name (without file extension)>
+$ npm test functions-1
 ```
-So if you want to test `functions-1.js` run `$ npm test functions-1` and the
-test output will be printed to the terminal a la:
+So when you want to test some code you've written into a file do:
+`$ npm run <filename without extension>`
+
+The test output will be printed to the terminal a la:
 ```bash
   Test repeater function
 
