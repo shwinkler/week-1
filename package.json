@@ -1,0 +1,16 @@
+{
+  "name": "framework-week-1",
+  "version": "0.0.1",
+  "description": "week-1",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js | tap-spec"
+  },
+  "author": "Jared Fowler <jared@codesmith.io>",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "^7.1.2",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
+  }
+}
