@@ -3,7 +3,7 @@ const fn1 = require('./../functions-1')
 
 test('Test repeater function', (t) => {
   t.plan(3)
-  var repeater = variables.repeater
+  var repeater = fn1.repeater
   var threeBeeps = repeater('beep', 3)
 
   t.ok(Array.isArray(threeBeeps), '`repeater` function creates an array')
