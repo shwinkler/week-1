@@ -2,7 +2,7 @@
 'use strict';
 
 const test = require('tape');
-const spawn = require('tape-spawn')
+const spawn = require('tape-spawn');
 const loopFns = require('./../loops.js');
 
 test('sumNums', (t) => {

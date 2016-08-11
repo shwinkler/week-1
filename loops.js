@@ -91,7 +91,7 @@ function reverseArrayInPlace(array) {
  */
 
 function zippedArray(array1, array2) {
-  let zipped = [];
+  const zipped = [];
   for (let i = 0; i < array1.length; i++) {
     zipped.push(array1[i], array2[i]);
   }
@@ -99,7 +99,7 @@ function zippedArray(array1, array2) {
 }
 
 function zippedArrayDiffLengths(array1, array2) {
-  let zipped = [];
+  const zipped = [];
   const shortest = array1.length < array2.length ? array1 : array2;
   const longest = shortest === array1 ? array2 : array1;
   while (shortest.length) {
@@ -114,7 +114,7 @@ function zippedArrayDiffLengths(array1, array2) {
  */
 
 function keyLength(obj, len) {
-  let keys = [];
+  const keys = [];
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
       if (obj[key].length === len) {
@@ -218,7 +218,7 @@ function drawStairs(num) {
  */
 
 function objectValues(array, key) {
-  let valueArray = [];
+  const valueArray = [];
   for (let i = 0; i < array.length; i++) {
     if (key in array[i]) {
       valueArray.push(array[i][key]);
@@ -256,7 +256,7 @@ function countLetters(string, character) {
 
 function higherPal(value) {
   for (++value; ; value++) {
-    let reversedValue = Number(value.toString().split('').reverse().join(''));
+    const reversedValue = Number(value.toString().split('').reverse().join(''));
     if (value === reversedValue) {
       return value;
     }
@@ -267,7 +267,7 @@ function higherPalLongWay(value) {
   let flag = true;
   while (flag) {
     value++;
-    let stringValue = value.toString();
+    const stringValue = value.toString();
     for (let i = 0, j = stringValue.length - 1; i < Math.floor(stringValue.length / 2); i++, j--) {
       if (stringValue[i] !== stringValue[j]) {
         flag = true;
