@@ -131,13 +131,13 @@ function keyLength(obj, len) {
  */
 
 function countAndSum(array) {
-  if (array.length === 0 || !array) return [];
+  if (!array || array.length === 0) return [];
   let count = 0;
   let sum = 0;
   for (let i = 0; i < array.length; i++) {
-    if (i < 0) {
+    if (array[i] < 0) {
       sum += array[i];
-    } else {
+    } else if (array[i] > 0) {
       count++;
     }
   }
@@ -203,12 +203,12 @@ function drawStairs(num) {
     staircase += step;
     if (i < num - 1) staircase += '\n';
   }
-  return staircase;
+  console.log(staircase);
 }
 
 /* Write a function that extracts pieces of data and stores them in an array.
  *  The function accepts two parameters: an array of objects and a string.
- *  Return an array containing the value in which the key matches the given string.
+ *  Return an array containing the value of the key that matches the given string.
  *  objectValues([
  *   { user: 'sally', color: 'blue' },
  *   { user: 'bob', color: 'green' },
@@ -220,25 +220,26 @@ function drawStairs(num) {
 function objectValues(array, key) {
   let valueArray = [];
   for (let i = 0; i < array.length; i++) {
-    if (array[i][key]) {
+    if (key in array[i]) {
       valueArray.push(array[i][key]);
     }
   }
   return valueArray;
 }
 
-/* Write a function that takes two inputs: a string and a letter.
+/* Write a function that takes two inputs: a string and a character.
  *  The function will count the number of times the letter appears in the string.
  *  The count is case insensitive. The character can be any alphanumeric character.
  *  countLetters('foobaro','o') -> 3
  *  countLetters('Sally sings songs sweetly', 's') -> 6
  */
 
-function countLetters(string, letter) {
+function countLetters(string, character) {
   let count = 0;
-  let lowerString = string.toLowerCase();
-  for (let i = 0; i < lowerString.length; i++) {
-    if (lowerString[i] === letter) {
+  const characterStr = character.toString();
+  const lowerStr = string.toLowerCase();
+  for (let i = 0; i < lowerStr.length; i++) {
+    if (lowerStr[i] === characterStr) {
       count++;
     }
   }
